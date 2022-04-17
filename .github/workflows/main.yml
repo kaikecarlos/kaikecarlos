@@ -2,9 +2,6 @@ name: Metrics
 on:
   # Schedule updates (each hour)
   schedule: [{cron: "0 * * * *"}]
-  # Lines below let you run workflow manually and on each commit
-  workflow_dispatch:
-  push: {branches: ["master", "main"]}
 jobs:
   github-metrics:
     runs-on: ubuntu-latest
@@ -33,8 +30,6 @@ jobs:
           plugin_anilist_sections: favorites
           plugin_anilist_shuffle: yes
           plugin_anilist_user: .user.login
-          plugin_isocalendar: yes
-          plugin_isocalendar_duration: half-year
           plugin_languages: yes
           plugin_languages_analysis_timeout: 15
           plugin_languages_categories: markup, programming
